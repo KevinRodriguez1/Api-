@@ -7,7 +7,7 @@ const resultados = document.querySelector(".resultado");
 
 
 buscador.addEventListener("click", () => {
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${termino.value}&limit=25`
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${termino.value}&limit=9`
     const peticion = fetch(url);
 
     peticion
@@ -17,9 +17,16 @@ buscador.addEventListener("click", () => {
         })
 
         .then((response) => {
-            console.log(response);
+            /*console.log(response);*/
+           response.data.forEach(element => {
+                const urlImg = element.images.original.url;
+                const img = document.createElement("img");
+                img.src = urlImg;
+                resultados.appendChild(img);
+                
+            });
         })
+        
 
         
 }) 
-
