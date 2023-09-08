@@ -1,18 +1,11 @@
     h1 {
         text-align: center;
-        /* Centrar el texto horizontalmente */
         padding: 20px;
-        /* Espaciado interior para separación */
         background-color: #F4F4F4;
-        /* Color de fondo */
         color: #67895a;
-        /* Color del texto */
         border: 2px solid #CCCCCC;
-        /* Borde sólido */
         border-radius: 10px;
-        /* Bordes redondeados */
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        /* Sombra */
     }
     
     .con1 {
@@ -22,7 +15,7 @@
         padding: auto;
     }
     
-    .gif-card {
+    */ .gif-card {
         display: grid;
         width: 40%;
         height: 80%;
@@ -32,11 +25,7 @@
     .resultado {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        /* Crear 3 columnas de tamaño igual */
         gap: 5px;
-        /* Espacio entre elementos */
         justify-content: center;
-        /* Centrar elementos horizontalmente */
         align-content: center;
-        /* Centrar elementos verticalmente */
     }
