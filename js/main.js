@@ -16,17 +16,20 @@ buscador.addEventListener("click", () => {
 
         })
 
-        .then((response) => {
-            /*console.log(response);*/
-           response.data.forEach(element => {
-                const urlImg = element.images.original.url;
-                const img = document.createElement("img");
-                img.src = urlImg;
-                resultados.appendChild(img);
-                
-            });
-        })
-        
+    .then((response) => {
+        /*console.log(response);*/
+        response.data.forEach(element => {
+            const urlImg = element.images.original.url;
+            const img = document.createElement("img");
+            const div = document.createElement("div");
+            div.className = "gif-card"
+            img.src = urlImg;
+            resultados.appendChild(div);
+            div.appendChild(img);
 
-        
-}) 
+        });
+    })
+
+
+
+})
